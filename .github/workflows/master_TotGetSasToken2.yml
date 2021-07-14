@@ -41,4 +41,4 @@ jobs:
         app-name: 'TotGetSasToken2'
         slot-name: 'production'
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d717b6d0473146ef84de2f7a45c7edcd }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c412ef52558b4010b6ec587a66093b2c }}
