@@ -15,7 +15,7 @@ env:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v2
@@ -26,7 +26,7 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
 
     - name: 'Resolve Project Dependencies Using Npm'
-      shell: bash
+      shell: pwsh
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
         npm install
@@ -41,4 +41,4 @@ jobs:
         app-name: 'TOTGetSASToken'
         slot-name: 'production'
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ab5ec5567e964316a3c090304bda9990 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0f7047681e8c4b92b18fd0eb3b790a70 }}
